@@ -45,5 +45,24 @@ namespace PruebaTecnica.Controllers
                 }
             };
         }
+
+        [HttpGet]
+        [Route("listarSucursales")]
+        public dynamic listarSucursales()
+        {
+            DataTable tSucursales = DBdatos.ListarEstudios("obtenerSucursales");
+
+            string jtSucursales = JsonConvert.SerializeObject(tSucursales);
+
+            return new
+            {
+                success = true,
+                msg = "exito",
+                result = new
+                {
+                    estudio = JsonConvert.DeserializeObject<List<Sucursal>>(jtSucursales)
+                }
+            };
+        }
     }
 }

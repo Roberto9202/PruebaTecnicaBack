@@ -7,7 +7,7 @@ namespace PruebaTecnica.Recursos
     public class DBdatos
     {
         public static string cadenaConexion = "Data Source=ROBERT;Initial Catalog=pruebaTecnica;User ID=sa;Password=walker1234";
-        public static DataSet ListarTablas(string nombreProcedimiento, List<Parametro> parametros = null)
+        public static DataSet ListarSucursales(string nombreProcedimiento, List<Parametro> parametros = null)
         {
             SqlConnection conexion = new SqlConnection(cadenaConexion);
 

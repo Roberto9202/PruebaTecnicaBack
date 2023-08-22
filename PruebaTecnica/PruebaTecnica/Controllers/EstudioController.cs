@@ -32,7 +32,7 @@ namespace PruebaTecnica.Controllers
 
         [HttpPost]
         [Route("agregarEstudio")]
-        public dynamic agregarEstudio(Estudio es)
+        public dynamic agregarEstudio(agregarEstudio es)
         {
             List<Parametro> lista = new List<Parametro> {
                 new Parametro("@estudio", es.estudio),
